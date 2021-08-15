@@ -1,5 +1,5 @@
 require('dotenv').config();
-var https = require('https');
+// var https = require('https');
 const fs = require('fs')
 
 const express = require('express');
@@ -30,6 +30,6 @@ server.use('/api', routes);
 //   });
 
 
-server.listen(process.env.PORT, () => {
+server.listen(process.env.PORT || 5000, () => {
     console.log(`servidor rodando em http://localhost:${process.env.PORT}`)
 });

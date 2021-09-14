@@ -1,5 +1,4 @@
 require('dotenv').config();
-// var https = require('https');
 const fs = require('fs')
 
 const express = require('express');
@@ -11,21 +10,14 @@ const routes = require('./routes');
 
 const server = express();
 server.use(cors());
-server.use(bodyParser.urlencoded({ extended: false }));
-// server.use(bodyParser.json()); //envia e recebe formado json
+server.use(bodyParser.urlencoded({ extended: true }));
+server.use(express.json())
 
 
 
 server.use(fileupload());
-//pasta pública, para imagens, icones etc (usado tb para upload), consigo acessar com link direto
 server.use('/api', routes);
-
-
 server.use('/api', express.static(__dirname + './../public'));
-
-
-
-
 
 
 server.listen(process.env.PORT || 5000, () => {

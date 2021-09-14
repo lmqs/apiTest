@@ -24,16 +24,7 @@ server.use('/api', routes);
 server.use('/api', express.static(__dirname + './../public'));
 
 
-/**testar isso aqui depois, passando o endereço absoluto (endereço completo da pasta public) */
-// server.use(path.join(__dirname, '../public'));
 
-
-
-
-/**caso não encontre nenhuma rota disponível, ele entra nesse midleware */
-// server.use( (req,res) => {
-//     res.status(404).send('Página não encontrada');
-// });
 
 
 

@@ -5,13 +5,13 @@ function trataImagem(path) {
     if (path) {
         return `https://apidividendos.herokuapp.com/api/assets/images/${path}`;
     }
-    return `https://apidividendos.herokuapp.com/assets/images/semimagem.svg`;
+    return `https://apidividendos.herokuapp.com/api/assets/images/semimagem.svg`;
 }
 function trataImagemIPO(path) {
     if (path) {
         return `https://apicronservice.herokuapp.com/api_service/${path}`;
     }
-    return `https://apidividendos.herokuapp.com/assets/images/semimagem.svg`;
+    return `https://apidividendos.herokuapp.com/api/assets/images/semimagem.svg`;
 }
 
 function trataData(data) {

@@ -3,7 +3,7 @@ const ApiService = require('../services/ApiService');
 
 function trataImagem(path) {
     if (path) {
-        return `https://apicronservice.herokuapp.com/api_service/${path}`;
+        return `https://apidividendos.herokuapp.com/assets/images/${path}`;
     }
     return `https://apidividendos.herokuapp.com/assets/images/semimagem.svg`;
 }

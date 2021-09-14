@@ -4,14 +4,16 @@ const router = express.Router();
 const ApiController = require('./controllers/ApiController');
 
 router.get('/ping', ApiController.ping);
-// router.get('/proventos' , ApiController.proventos);
-// router.get('/proventosFiltro' , ApiController.proventosFiltro);
-// router.get('/provento/:id' , ApiController.umProvento);
+router.get('/proventos/:tipo/:itensPagina/:page' , ApiController.proventos);
+router.get('/relatorios/:tipo/:itensPagina/:page' , ApiController.relatorios);
+router.get('/ipos/:tipo/:itensPagina/:page' , ApiController.IPOs);
+router.get('/todos/:itensPagina/:page' , ApiController.verTodos);
 
-// router.get('/ativo/:id' , ApiController.umAtivo);
 
-// GET api/proventos -> 
-// GET api/comunicados -> 
+router.get('/indicesAtual' , ApiController.indicesAtual);
+router.get('/geral' , ApiController.geral);
+
+
 
 
 
